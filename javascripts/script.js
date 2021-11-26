@@ -55,10 +55,10 @@ function randomizar(){
 }
 
 function guessed(guess){
-  botonOtaku.setAttribute('onclick','');
-  botonPeronista.setAttribute('onclick','');
   var img = document.getElementById("foto");
   img.src = getLink(listaTodos[puntaje], 0);
+  botonOtaku.setAttribute('onclick','');
+  botonPeronista.setAttribute('onclick','');
   if (listaTodos[puntaje][0] == 0) {
     botonOtaku.className = "btn boton btn-lg botonAcierto";
     botonPeronista.className = "btn boton btn-lg botonError";
@@ -86,7 +86,7 @@ function guessed(guess){
     textoPerdiste.innerHTML = "SCORE: " + puntaje;
     var perdiste = document.getElementById("ganasteperdiste");
     perdiste.innerHTML = "PERDISTE";
-    setTimeout("myModal.toggle()", 750);
+    setTimeout("myModal.toggle()", 1750);
   }
 }
 
