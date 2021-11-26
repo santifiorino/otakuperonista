@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7f3d26f49b.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6139929522298861"
+     crossorigin="anonymous"></script>
+     <link rel="icon" href="/images/icon.png">
+  </head>
+  <body>
+    <div class="titulo">
+      <img class="img-fluid imgTitulo" src="/images/titulo.png" width="800px">
+    </div>
+    <div class="juego">
+      <div class="divMaxPuntos fs-4">
+        <p id="maxScore"> MAX SCORE: 0 </p>
+      </div>
+      <div class="divPuntos fs-4">
+        <p id="puntaje"> SCORE: 0 </p>
+      </div>
+      <img class="img-fluid" id="foto" width="500px">
+      <div class="botonera">
+        <div class="btn-group">
+          <button type="button" id="botonOtaku" onclick="guessed(0)" class="btn boton btn-lg">OTAKU</button>
+          <button type="button" id="botonPeronista" onclick="guessed(1)" class="btn boton btn-lg">PERONISTA</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <p id="ganasteperdiste" class="fs-4">PERDISTE</p>
+          </div>
+          <div class="modal-body">
+            <p id="textoPerdiste" class="fs-4"> </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" onclick="reiniciar()" class="btn boton fs-4">REINICIAR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+        keyboard: false
+      })
+      var botonOutaku = document.getElementById("botonOtaku");
+      var botonPeronista = document.getElementById("botonPeronista");
+
+      var listaTodos = [];
+      var puntaje = 0;
+      var maxPuntaje = 0;
+      init();
+
+      function init(){
+        var cantOtakus = 6;
+        var cantPeronistas = 5;
+
+        var listaOtakus = [];
+        var listaPeronistas = [];
+
+        for(var i = 0; i < cantOtakus; i++){
+          var id = getID(i);
+          listaOtakus.push([0, id]);
+        }
+
+        for(var i = 0; i < cantPeronistas; i++){
+          var id = getID(i);
+          listaPeronistas.push([1, id]);
+        }
+        listaTodos = listaOtakus.concat(listaPeronistas);
+        randomizar();
+        var img = document.getElementById("foto");
+        img.src = getLink(listaTodos[0], 1);
+      }
+
+      function getLink(tupla, prev){
+        var url = "/images"
+        if (tupla[0] == 0){
+          if (prev == 1){
+            url += "/otk_preview/";
+          } else {
+            url += "/otk_full/";
+          }
+        } else {
+          if (prev == 1){
+            url += "/per_preview/";
+          } else {
+            url += "/per_full/";
+          }
+        }
+        url += tupla[1] + ".png";
+        return url;
+      }
+
+      function randomizar(){
+        listaTodos = listaTodos.sort((a, b) => 0.5 - Math.random());
+      }
+
+      function guessed(guess){
+        botonOtaku.setAttribute('onclick','');
+        botonPeronista.setAttribute('onclick','');
+        var img = document.getElementById("foto");
+        img.src = getLink(listaTodos[puntaje], 0);
+        if (listaTodos[puntaje][0] == 0) {
+          botonOtaku.className = "btn boton btn-lg botonAcierto";
+          botonPeronista.className = "btn boton btn-lg botonError";
+        } else {
+          botonOtaku.className = "btn boton btn-lg botonError";
+          botonPeronista.className = "btn boton btn-lg botonAcierto";
+        }
+        if (guess == listaTodos[puntaje][0]){
+          puntaje++;
+          if (puntaje > maxPuntaje){
+            maxPuntaje = puntaje;
+          }
+          actualizarScores();
+          if (puntaje == listaTodos.length) {
+            var p = document.getElementById("textoPerdiste");
+            textoPerdiste.innerHTML = "SCORE: " + puntaje;
+            var perdiste = document.getElementById("ganasteperdiste");
+            perdiste.innerHTML = "GANASTE";
+            myModal.toggle();
+          } else {
+            setTimeout("siguienteFoto()", 1750);
+          }
+        } else {
+          var p = document.getElementById("textoPerdiste");
+          textoPerdiste.innerHTML = "SCORE: " + puntaje;
+          var perdiste = document.getElementById("ganasteperdiste");
+          perdiste.innerHTML = "PERDISTE";
+          setTimeout("myModal.toggle()", 750);
+        }
+      }
+
+      function actualizarScores(){
+        var p = document.getElementById("puntaje");
+        p.innerHTML = "SCORE: " + puntaje;
+        var p2 = document.getElementById("maxScore");
+        p2.innerHTML = "MAX SCORE: " + maxPuntaje;
+      }
+
+      function reiniciar(){
+        randomizar();
+        puntaje = 0;
+        actualizarScores();
+        myModal.toggle();
+        siguienteFoto();
+      }
+
+      function siguienteFoto(){
+        var img = document.getElementById("foto");
+        img.src = getLink(listaTodos[puntaje], 1);
+        botonOtaku.className = "btn boton btn-lg";
+        botonPeronista.className = "btn boton btn-lg";
+        botonOtaku.setAttribute('onclick','guessed(0)');
+        botonPeronista.setAttribute('onclick','guessed(1)');
+      }
+
+      function getID(i){
+        var id = "";
+        if (i < 10) {
+          id += "00";
+        } else if (i < 100){
+          id += "0";
+        }
+        id += i;
+        return id;
+      }
+
+    </script>
+  </body>
+  <footer class="footer-area section_gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <a href="https://www.instagram.com/santifiorino" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> <br>
+          <a href="https://www.linkedin.com/in/sfiorino/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> <br>
+          <a href="https://discord.gg/7mjeaW7vnQ" target="_blank"><i class="fab fa-discord"></i> Discord</a> <br>
+          <a href="#" target="_blank"><i class="fab fa-tiktok"></i> TikTok </a>
+        </div>
+        <div class="col">
+          <p class="info"> No tengo relación alguna con ningún Partido Político. Este sitio fue creado por puro entretenimiento.</p>
+          <p class="info"> Si querés agregar fotos a la base de datos contactame a cualquier red social. Asegurate de que
+              la mano se vea clara y grande, y que detrás no tenga nada que facilite saber la respuesta (Por ejemplo: Pelos de colores / Banderas Argentinas). </p>
+          <p class="info"> Si la página incluye una foto tuya que no querés que sea parte del proyecto, contactame a cualquier
+              red social indicando qué foto es y será borrada inmediatamente. </p>
+          <p class="info" > Idea original del usuario de Twitter <a href="https://twitter.com/nachoinventado/status/1463289179022966790?s=21" target="_blank"> @nachoinventado. </a></p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</html>
