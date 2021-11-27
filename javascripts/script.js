@@ -2,12 +2,11 @@
 var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
   keyboard: false
 })
-
+// Los botones de adivinar
 var botonOutaku = document.getElementById("botonOtaku");
 var botonPeronista = document.getElementById("botonPeronista");
-// En foto1 pongo las previews, en foto2 pongo las fotos enteras
-var foto1 = document.getElementById("foto1");
-var foto2 = document.getElementById("foto2");
+// La foto del juego
+var foto = document.getElementById("foto");
 // listaTodos tiene tuplas con un 0 o un 1 en la primer posicion
 // 0: otaku, 1: peronista, y el id de la foto en la segunda posicion
 var listaTodos = [];
@@ -42,8 +41,7 @@ function randomizar(){
 // Funcion que llama cuando tocas el boton Otaku o Peronista
 function guessed(guess){
   // Muestro la foto entera
-  foto1.style.display = "none";
-  foto2.style.display = "block";
+  foto.src = getLink(listaTodos[puntaje], 0);
   // Inhabilito los botones para evitar que lo toquen antes de que cargue la siguiente imagen
   botonOtaku.setAttribute('onclick','');
   botonPeronista.setAttribute('onclick','');
@@ -101,10 +99,7 @@ function reiniciar(){
 
 function siguienteFoto(){
   // cargo las fotos y muestro el preview
-  foto1.src = getLink(listaTodos[puntaje], 1);
-  foto2.src = getLink(listaTodos[puntaje], 0);
-  foto1.style.display = "block";
-  foto2.style.display = "none";
+  foto.src = getLink(listaTodos[puntaje], 1);
   // Pongo los botones en blanco de nuevo y los habilito
   botonOtaku.className = "btn boton btn-lg";
   botonPeronista.className = "btn boton btn-lg";
