@@ -10,8 +10,8 @@ var maxPuntaje = 0;
 init();
 
 function init(){
-  var cantOtakus = 27;
-  var cantPeronistas = 28;
+  var cantOtakus = 60;
+  var cantPeronistas = 60;
 
   var listaOtakus = [];
   var listaPeronistas = [];
