@@ -124,3 +124,16 @@ footer {
   text-align: left;
   padding: 2rem 0rem 2rem 0rem;
 }
+
+#textoPerdiste {
+  font-weight: 500;
+}
+
+.botonmp {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  border-radius: 2rem;
+  font-size: .7rem;
+  margin-top: 1rem;
+}
