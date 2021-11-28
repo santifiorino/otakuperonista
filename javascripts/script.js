@@ -78,7 +78,7 @@ function guessed(guess){
     textoPerdiste.innerHTML = "SCORE: " + puntaje;
     var perdiste = document.getElementById("ganasteperdiste");
     perdiste.innerHTML = "PERDISTE";
-    setTimeout("myModal.toggle()", 750);
+    setTimeout("myModal.toggle()", 1750);
   }
 }
 
