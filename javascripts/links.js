@@ -59,7 +59,6 @@ var otaku_links = {
     "057": ["https://i.imgur.com/hHN2dLC.png", "https://i.imgur.com/TPVZar1.png"],
     "058": ["https://i.imgur.com/Lj2hUqz.png", "https://i.imgur.com/IRlKVIn.png"],
     "059": ["https://i.imgur.com/HwQGu7v.png", "https://i.imgur.com/jzMQPGN.png"]
-
 };
 
 var peronista_links = {
@@ -108,7 +107,7 @@ var peronista_links = {
     "042": ["https://i.imgur.com/5rb2zpT.png", "https://i.imgur.com/1pvjsMI.png"],
     "043": ["https://i.imgur.com/EdQdnXu.png", "https://i.imgur.com/FFfYIhS.png"],
     "044": ["https://i.imgur.com/IE5YObQ.png", "https://i.imgur.com/mAmAvdS.png"],
-    "045": ["https://i.imgur.com/7jB1NBG.png", "https://i.imgur.com/Ixt7JdA.png"],
+    "045": ["https://i.imgur.com/wYuZttI.png", "https://i.imgur.com/BNd6byK.png"],
     "046": ["https://i.imgur.com/FXRhdZB.png", "https://i.imgur.com/QozB76r.png"],
     "047": ["https://i.imgur.com/HOdtTde.png", "https://i.imgur.com/XaEqjDq.png"],
     "048": ["https://i.imgur.com/BgpT3yV.png", "https://i.imgur.com/bRhjcBN.png"],
@@ -121,6 +120,5 @@ var peronista_links = {
     "055": ["https://i.imgur.com/IGIqu0Y.png", "https://i.imgur.com/E1Vy9wx.png"],
     "056": ["https://i.imgur.com/7Pk74N0.png", "https://i.imgur.com/Abqy4jk.png"],
     "057": ["https://i.imgur.com/OlqpKe6.png", "https://i.imgur.com/Xf7n1fA.png"],
-    "058": ["https://i.imgur.com/ohcGSzJ.png", "https://i.imgur.com/516Wtsc.png"],
-    "059": ["https://i.imgur.com/wYuZttI.png", "https://i.imgur.com/BNd6byK.png"]
+    "058": ["https://i.imgur.com/ohcGSzJ.png", "https://i.imgur.com/516Wtsc.png"]
 };
