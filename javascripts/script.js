@@ -17,7 +17,7 @@ init();
 function init(){
   // Cantidad de fotos en la base de datos
   var cantOtakus = 60;
-  var cantPeronistas = 59;
+  var cantPeronistas = 58;
   // Inicializo listaTodos
   var listaOtakus = [];
   var listaPeronistas = [];
