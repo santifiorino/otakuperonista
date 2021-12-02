@@ -16,17 +16,17 @@ init();
 
 function init(){
   // Cantidad de fotos en la base de datos
-  var cantOtakus = 60;
-  var cantPeronistas = 58;
+  const cantOtakus = 60;
+  const cantPeronistas = 60;
   // Inicializo listaTodos
-  var listaOtakus = [];
-  var listaPeronistas = [];
-  for(var i = 0; i < cantOtakus; i++){
-    var id = getID(i);
+  let listaOtakus = [];
+  let listaPeronistas = [];
+  for(let i = 0; i < cantOtakus; i++){
+    let id = getID(i);
     listaOtakus.push([0, id]);
   }
-  for(var i = 0; i < cantPeronistas; i++){
-    var id = getID(i);
+  for(let i = 0; i < cantPeronistas; i++){
+    let id = getID(i);
     listaPeronistas.push([1, id]);
   }
   listaTodos = listaOtakus.concat(listaPeronistas);
@@ -74,18 +74,18 @@ function guessed(guess){
     }
   } else {
     // Escribo en el modal que perdiste y lo muestro
-    var p = document.getElementById("textoPerdiste");
+    let p = document.getElementById("textoPerdiste");
     textoPerdiste.innerHTML = "SCORE: " + puntaje;
-    var perdiste = document.getElementById("ganasteperdiste");
+    let perdiste = document.getElementById("ganasteperdiste");
     perdiste.innerHTML = "PERDISTE";
     setTimeout("myModal.toggle()", 1750);
   }
 }
 
 function actualizarScores(){
-  var p = document.getElementById("puntaje");
+  let p = document.getElementById("puntaje");
   p.innerHTML = "SCORE: " + puntaje;
-  var p2 = document.getElementById("maxScore");
+  let p2 = document.getElementById("maxScore");
   p2.innerHTML = "MAX SCORE: " + maxPuntaje;
 }
 // Reiniciar: randomiza la lista de nuevo, pone el puntaje en 0 y arranca
@@ -124,7 +124,7 @@ function getLink(tupla, prev){
 }
 
 function getID(i){
-  var id = "";
+  let id = "";
   if (i < 10) {
     id += "00";
   } else if (i < 100){
