@@ -104,7 +104,7 @@ var peronista_links = {
     "039": ["https://i.imgur.com/wG70SnH.png", "https://i.imgur.com/7ey0f6Z.png"],
     "040": ["https://i.imgur.com/S9igFu6.png", "https://i.imgur.com/7HlFLza.png"],
     "041": ["https://i.imgur.com/PgD4J3u.png", "https://i.imgur.com/Vgk7dgG.png"],
-    "042": ["https://i.imgur.com/5rb2zpT.png", "https://i.imgur.com/1pvjsMI.png"],
+    "042": ["https://i.imgur.com/HrJMT7s.png", "https://i.imgur.com/ec1upPy.png"],
     "043": ["https://i.imgur.com/EdQdnXu.png", "https://i.imgur.com/FFfYIhS.png"],
     "044": ["https://i.imgur.com/IE5YObQ.png", "https://i.imgur.com/mAmAvdS.png"],
     "045": ["https://i.imgur.com/wYuZttI.png", "https://i.imgur.com/BNd6byK.png"],
@@ -119,5 +119,7 @@ var peronista_links = {
     "054": ["https://i.imgur.com/4wAipTt.png", "https://i.imgur.com/MVIoE8H.png"],
     "055": ["https://i.imgur.com/IGIqu0Y.png", "https://i.imgur.com/E1Vy9wx.png"],
     "056": ["https://i.imgur.com/7Pk74N0.png", "https://i.imgur.com/Abqy4jk.png"],
-    "057": ["https://i.imgur.com/OlqpKe6.png", "https://i.imgur.com/Xf7n1fA.png"]
+    "057": ["https://i.imgur.com/OlqpKe6.png", "https://i.imgur.com/Xf7n1fA.png"],
+    "058": ["https://i.imgur.com/zdNlGYs.png", "https://i.imgur.com/KWZKagC.png"],
+    "059": ["https://i.imgur.com/qEtoVXz.png", "https://i.imgur.com/1qxLy0t.png"]
 };
