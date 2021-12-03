@@ -1,8 +1,5 @@
 body {
-  background-color: #121212;
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  font-weight: 700;
 }
 
 a {
@@ -11,122 +8,96 @@ a {
   font-weight: 700;
 }
 
-ul {
-  list-style-type: none;
-}
-
-p {
+footer p {
   margin-bottom: 0;
-}
-
-.titulo {
-  background-color: #ffffff;
-}
-
-.imgTitulo {
-  padding: 1.5rem;
-}
-
-.fa-twitter {
-  margin-right: 6px;
-}
-
-.fa-instagram {
-  margin-right: 7px;
-}
-
-.fa-linkedin {
-  margin-right: 8px;
-}
-
-.fa-discord {
-  margin-right: 5px;
-  margin-left: -3px;
-}
-
-.fa-tiktok {
-  margin-right: 9px;
-}
-
-.info {
-  color: #ffffff;
   font-weight: 400;
   font-size: .8rem;
 }
 
+.infoInicio {
+    padding: 2rem;
+}
+
+.inicio {
+  background-color: #ededed;
+  border-radius: 0rem 0rem 2rem 2rem;
+  text-align: center;
+}
+
+.titulo {
+  font-weight: 900;
+}
+
+.descripcion {
+  font-weight: 500;
+}
+
+.containerJuego{
+  background-color: #ffffff;
+  border-radius: 2rem;
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
 .juego {
-  padding: 0rem;
+  background-color: #5a4ebc;
+  border-radius: 2rem;
+  width: min(100%, 500px);
+  margin: auto;
+  text-align: center;
+}
+
+.score {
+    color: white;
+    font-weight: 700;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.containerImagen {
+  border-radius: 2rem 2rem 0rem 0rem;
   background-color: #ffffff;
-  color: white;
 }
 
-.divMaxPuntos {
-  background-color: #424242;
-
+.botonesAdivinar{
+  width: 100%;
 }
 
-.divPuntos {
-  background-color: #75aadb;
-}
-
-.botonera {
-  background-color: #75aadb;
-  padding: 1rem 0rem 1rem 0rem;
-}
-
-.boton {
-  background-color: #ffffff;
-  border-radius: 0;
-  font-weight: 700;
-  width: min(85vw/2, 250px);
-}
-
-.boton:hover {
-  background-color: #cccccc;
-}
-
-.botonError {
-  background-color: #b00020;
+.botonesAdivinar button {
   color: #ffffff;
+  font-weight: 700;
+  width: min(100%/2, 250px);
+  height: 3rem;
+}
+
+.botonesAdivinar button:hover {
+  color: #ffffff;
+}
+
+.botonOtaku {
+  background-color: #5a4ebc;
+  border-radius: 0rem 0rem 0rem 2rem;
+}
+
+.botonPeronista {
+  background-color: #5a4ebc;
+  border-radius: 0rem 0rem 2rem 0rem;
 }
 
 .botonAcierto {
-  background-color: #03b000;
-  color: #ffffff;
+  background-color: #3cb750;
 }
 
-.botonError:hover {
-  background-color: #b00020;
-  color: #ffffff;
-}
-.botonAcierto:hover {
-  background-color: #03b000;
-  color: #ffffff;
-}
-
-.modal-dialog * {
-  margin: 0 auto;
-}
-
-.modal-footer {
-  background-color: #75aadb;
-  width: 100%;
-}
-
-.modal-header {
-  background-color: #75aadb;
-  width: 100%;
+.botonError {
+  background-color: #b73c3c;
 }
 
 footer {
-  background-color: #121212;
-  font-family: 'Montserrat', sans-serif;
-  text-align: left;
+  background-color: #1c1c1c;
+  border-radius: 2rem 2rem 0rem 0rem;
   padding: 2rem 0rem 2rem 0rem;
-}
-
-#textoPerdiste {
-  font-weight: 500;
+  color: white;
 }
 
 .botonmp {
@@ -136,4 +107,21 @@ footer {
   border-radius: 2rem;
   font-size: .7rem;
   margin-top: 1rem;
+}
+
+.fa-linkedin {
+  margin-right: 8px;
+}
+
+.fa-instagram {
+  margin-right: 7px;
+}
+
+.fa-discord {
+  margin-right: 5px;
+  margin-left: -3px;
+}
+
+.fa-tiktok {
+  margin-right: 9px;
 }
