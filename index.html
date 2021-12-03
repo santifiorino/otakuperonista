@@ -19,22 +19,23 @@
 
   <body>
 
-    <div class="titulo">
-      <img class="img-fluid imgTitulo" src="./images/titulo.png" width="800px">
-    </div>
-
-    <div class="juego">
-      <div class="divMaxPuntos fs-4">
-        <p id="maxScore"> MAX SCORE: 0 </p>
+    <div class="inicio">
+      <div class="infoInicio">
+        <h1 class="titulo"> ¿Otaku o Peronista? </h1>
+        <p class="descripcion"> ¿Podés distinguir a Otakus y Peronistas haciendo ✌️ sólamente mirando su mano? Intentalo. </p>
       </div>
-      <div class="divPuntos fs-4">
-        <p id="puntaje"> SCORE: 0 </p>
-      </div>
-      <img id="foto" class="img-fluid" width="500px">
-      <div class="botonera">
-        <div class="btn-group">
-          <button type="button" id="botonOtaku" onclick="guessed(0)" class="btn boton btn-lg">OTAKU</button>
-          <button type="button" id="botonPeronista" onclick="guessed(1)" class="btn boton btn-lg">PERONISTA</button>
+      <div class="containerJuego">
+        <div class="juego">
+          <p class="score" id="puntaje"> 0 PUNTOS</p>
+          <div class="containerImagen">
+            <img class="img-fluid" id="foto" width="500px">
+          </div>
+          <div>
+            <div class="btn-group botonesAdivinar">
+              <button type="button" id="botonOtaku" onclick="guessed(0)" class="btn botonOtaku">OTAKU</button>
+              <button type="button" id="botonPeronista" onclick="guessed(1)" class="btn botonPeronista">PERONISTA</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,20 +44,20 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <p id="ganasteperdiste" class="fs-2">PERDISTE</p>
+            <p id="ganasteperdiste">PERDISTE</p>
           </div>
           <div class="modal-body">
-            <p id="textoPerdiste" class="fs-4"> </p>
+            <p id="textoPerdiste"> </p>
           </div>
           <div class="modal-footer">
-            <button type="button" onclick="reiniciar()" class="btn boton fs-4">REINICIAR</button>
+            <button type="button" onclick="reiniciar()" class="btn">REINICIAR</button>
           </div>
         </div>
       </div>
     </div>
 
-    <script src='./javascripts/links.js'></script>
-    <script src='./javascripts/script.js'></script>
+    <script src="/javascripts/links.js"></script>
+    <script src="/javascripts/script.js"></script>
 
   </body>
 
@@ -71,13 +72,13 @@
           <a href="https://www.tiktok.com/@santifiorino" target="_blank"><i class="fab fa-tiktok"></i> TikTok </a>
         </div>
         <div class="col">
-          <p class="info"> Desarrollada por <a href="mailto: fiorinosanti@gmail.com" target="_blank"> Santiago Fiorino. </a></p>
-          <p class="info"> No tengo relación alguna con ningún Partido Político. Este sitio fue creado por puro entretenimiento.</p>
-          <p class="info"> Si querés agregar fotos a la base de datos contactame a cualquier red social. Asegurate de que
+          <p> Desarrollada por <a href="mailto: fiorinosanti@gmail.com" target="_blank"> Santiago Fiorino. </a></p>
+          <p> No tengo relación alguna con ningún Partido Político. Este sitio fue creado por puro entretenimiento.</p>
+          <p> Si querés agregar fotos a la base de datos contactame a cualquier red social. Asegurate de que
               la mano se vea clara y grande, y que detrás no tenga nada que facilite saber la respuesta (Por ejemplo: Pelos de colores / Banderas Argentinas). </p>
-          <p class="info"> Si la página incluye una foto tuya que no querés que sea parte del proyecto, contactame a cualquier
+          <p> Si la página incluye una foto tuya que no querés que sea parte del proyecto, contactame a cualquier
               red social indicando qué foto es y será borrada inmediatamente. </p>
-          <p class="info" > Idea original del usuario de Twitter <a href="https://twitter.com/nachoinventado/status/1463289179022966790?s=21" target="_blank"> @nachoinventado. </a></p>
+          <p> Idea original del usuario de Twitter <a href="https://twitter.com/nachoinventado/status/1463289179022966790?s=21" target="_blank"> @nachoinventado. </a></p>
           <a class="btn botonmp" href="https://ceneka.net/santifiorino" target="_blank"> <img src="https://img.icons8.com/color/48/000000/mercado-pago.png" width="24px"/>  DONACIONES MERCADOPAGO</a>
         </div>
       </div>

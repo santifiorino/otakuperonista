@@ -37,8 +37,8 @@ function siguienteFoto(){
   let botonPeronista = document.getElementById("botonPeronista");
   foto.src = getLink(listaImagenes[puntaje], 1);
   // Pongo los botones en blanco y los habilito
-  botonOtaku.className = "btn boton btn-lg";
-  botonPeronista.className = "btn boton btn-lg";
+  botonOtaku.className = "btn botonOtaku";
+  botonPeronista.className = "btn botonPeronista";
   botonOtaku.setAttribute('onclick','guessed("otaku")');
   botonPeronista.setAttribute('onclick','guessed("peronista")');
 }
@@ -54,11 +54,11 @@ function guessed(guess){
   botonOtaku.setAttribute('onclick','');
   botonPeronista.setAttribute('onclick','');
   if (listaImagenes[puntaje].tipo == "otaku") {
-    botonOtaku.className = "btn boton btn-lg botonAcierto";
-    botonPeronista.className = "btn boton btn-lg botonError";
+    botonOtaku.className = "btn botonOtaku botonAcierto";
+    botonPeronista.className = "btn botonPeronista botonError";
   } else {
-    botonOtaku.className = "btn boton btn-lg botonError";
-    botonPeronista.className = "btn boton btn-lg botonAcierto";
+    botonOtaku.className = "btn botonOtaku botonError";
+    botonPeronista.className = "btn botonPeronista botonAcierto";
   }
   // Chequeo si adivinaste
   if (guess == listaImagenes[puntaje].tipo){
@@ -71,9 +71,9 @@ function guessed(guess){
     // Si el puntaje es igual a la cantidad total de fotos, ganaste
     if (puntaje == listaImagenes.length) {
       // Escribo en el modal que ganaste y lo muestro
-      let p = document.getElementById("textoPerdiste");
+      var p = document.getElementById("textoPerdiste");
       textoPerdiste.innerHTML = "SCORE: " + puntaje;
-      let perdiste = document.getElementById("ganasteperdiste");
+      var perdiste = document.getElementById("ganasteperdiste");
       perdiste.innerHTML = "GANASTE";
       myModal.toggle();
     } else {
@@ -91,9 +91,7 @@ function guessed(guess){
 
 function actualizarScores(){
   let p = document.getElementById("puntaje");
-  p.innerHTML = "SCORE: " + puntaje;
-  let p2 = document.getElementById("maxScore");
-  p2.innerHTML = "MAX SCORE: " + maxPuntaje;
+  p.innerHTML = "Puntaje: " + puntaje;
 }
 // Reiniciar: randomiza la lista de nuevo, pone el puntaje en 0 y arranca
 function reiniciar(){
