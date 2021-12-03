@@ -72,11 +72,7 @@ function guessed(guess){
     if (puntaje == listaImagenes.length) {
       // Escribo en el modal que ganaste y lo muestro
       var p = document.getElementById("textoPerdiste");
-      if (puntaje == maxPuntaje) {
-        textoPerdiste.innerHTML = "Nuevo puntaje máximo: " + puntaje;
-      } else {
-        textoPerdiste.innerHTML = "Puntaje: " + puntaje;
-      }
+      textoPerdiste.innerHTML = "Adivinaste las " + puntaje + " fotos, ya sos experto en diferenciar Otakus y Peronistas";
       var perdiste = document.getElementById("ganasteperdiste");
       perdiste.innerHTML = "GANASTE";
       myModal.toggle();
@@ -86,7 +82,11 @@ function guessed(guess){
   } else {
     // Escribo en el modal que perdiste y lo muestro
     let p = document.getElementById("textoPerdiste");
-    textoPerdiste.innerHTML = "SCORE: " + puntaje;
+    if (puntaje == maxPuntaje && puntaje > 0) {
+      textoPerdiste.innerHTML = "Nuevo puntaje máximo: " + puntaje;
+    } else {
+      textoPerdiste.innerHTML = "Puntaje: " + puntaje;
+    }
     let perdiste = document.getElementById("ganasteperdiste");
     perdiste.innerHTML = "PERDISTE";
     setTimeout("myModal.toggle()", 1750);
