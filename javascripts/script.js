@@ -72,7 +72,11 @@ function guessed(guess){
     if (puntaje == listaImagenes.length) {
       // Escribo en el modal que ganaste y lo muestro
       var p = document.getElementById("textoPerdiste");
-      textoPerdiste.innerHTML = "SCORE: " + puntaje;
+      if (puntaje == maxPuntaje) {
+        textoPerdiste.innerHTML = "Nuevo puntaje máximo: " + puntaje;
+      } else {
+        textoPerdiste.innerHTML = "Puntaje: " + puntaje;
+      }
       var perdiste = document.getElementById("ganasteperdiste");
       perdiste.innerHTML = "GANASTE";
       myModal.toggle();

@@ -135,6 +135,7 @@ footer {
 .modal-header{
   background-color: #5a4ebc;
   border-radius: 2rem 2rem 0rem 0rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
 }
@@ -143,11 +144,16 @@ footer {
   margin: auto;
 }
 
+#textoPerdiste {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
 .botonReiniciar {
   margin: auto;
   background-color: #5a4ebc;
   color: white;
   font-weight: 700;
-  padding: 0rem 2rem 0rem 2rem;
+  padding: .3rem 4rem .3rem 4rem;
   border-radius: 2rem;
 }
