@@ -60,6 +60,10 @@ footer p {
   background-color: #ffffff;
 }
 
+#foto {
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+
 .botonesAdivinar{
   width: 100%;
 }
