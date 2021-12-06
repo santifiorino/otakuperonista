@@ -15,7 +15,7 @@ init();
 
 function init(){
   // Inicializo listaImagenes
-  const fotosPorCategoria = 60;
+  const fotosPorCategoria = 68;
   for(let i = 0; i < fotosPorCategoria; i++){
     listaImagenes.push(new Imagen(getID(i), "otaku"));
     listaImagenes.push(new Imagen(getID(i), "peronista"));
