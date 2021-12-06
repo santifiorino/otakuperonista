@@ -58,7 +58,15 @@ var otaku_links = {
     "056": ["https://i.imgur.com/31xrPRM.png", "https://i.imgur.com/Ks0AMJr.png"],
     "057": ["https://i.imgur.com/hHN2dLC.png", "https://i.imgur.com/TPVZar1.png"],
     "058": ["https://i.imgur.com/Lj2hUqz.png", "https://i.imgur.com/IRlKVIn.png"],
-    "059": ["https://i.imgur.com/HwQGu7v.png", "https://i.imgur.com/jzMQPGN.png"]
+    "059": ["https://i.imgur.com/HwQGu7v.png", "https://i.imgur.com/jzMQPGN.png"],
+    "060": ["https://i.imgur.com/Du4yKDe.png", "https://i.imgur.com/aHbgDZW.png"],
+    "061": ["https://i.imgur.com/xZDwAwl.png", "https://i.imgur.com/r5enyw5.png"],
+    "062": ["https://i.imgur.com/w6p49Xs.png", "https://i.imgur.com/9bkiCdf.png"],
+    "063": ["https://i.imgur.com/VLLOuGm.png", "https://i.imgur.com/gnzbhMQ.png"],
+    "064": ["https://i.imgur.com/wXAoH4D.png", "https://i.imgur.com/FXez5h9.png"],
+    "065": ["https://i.imgur.com/MCTFiFo.png", "https://i.imgur.com/STp4tqZ.png"],
+    "066": ["https://i.imgur.com/EDjkkwp.png", "https://i.imgur.com/e6lMp4T.png"],
+    "067": ["https://i.imgur.com/R9t6ugF.png", "https://i.imgur.com/7LdSYOz.png"]
 };
 
 var peronista_links = {
@@ -121,5 +129,13 @@ var peronista_links = {
     "056": ["https://i.imgur.com/7Pk74N0.png", "https://i.imgur.com/Abqy4jk.png"],
     "057": ["https://i.imgur.com/OlqpKe6.png", "https://i.imgur.com/Xf7n1fA.png"],
     "058": ["https://i.imgur.com/zdNlGYs.png", "https://i.imgur.com/KWZKagC.png"],
-    "059": ["https://i.imgur.com/qEtoVXz.png", "https://i.imgur.com/1qxLy0t.png"]
+    "059": ["https://i.imgur.com/qEtoVXz.png", "https://i.imgur.com/1qxLy0t.png"],
+    "060": ["https://i.imgur.com/uVZNFJJ.png", "https://i.imgur.com/jAqAd5v.png"],
+    "061": ["https://i.imgur.com/pFcuCuk.png", "https://i.imgur.com/asw2Kej.png"],
+    "062": ["https://i.imgur.com/E7xVc6K.png", "https://i.imgur.com/XbB8BBz.png"],
+    "063": ["https://i.imgur.com/KOoNNTO.png", "https://i.imgur.com/rU1wQtm.png"],
+    "064": ["https://i.imgur.com/HweonkO.png", "https://i.imgur.com/8qZEqfT.png"],
+    "065": ["https://i.imgur.com/lmpHVsx.png", "https://i.imgur.com/3O8lq13.png"],
+    "066": ["https://i.imgur.com/hemDhwA.png", "https://i.imgur.com/2cob0bE.png"],
+    "067": ["https://i.imgur.com/PwulXNL.png", "https://i.imgur.com/bp2YiEp.png"]
 };
